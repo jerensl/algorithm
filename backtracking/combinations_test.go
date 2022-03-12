@@ -8,6 +8,14 @@ import (
 )
 
 func TestCombinations(t *testing.T) {
+	expected := [][]int{
+		{1,2},
+		{1,3},
+		{1,4},
+		{2,3},
+		{2,4},
+		{3,4},
+	}
 	result := backtracking.Combinations(4, 2)
-	assert.NotNil(t, result, "Return value of 2D array should not be nil, but got %v", result)
+	assert.Equal(t, expected, result, "Return value of 2D array should be %v, but got %v", expected, result)
 }
